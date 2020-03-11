@@ -87,7 +87,6 @@
     
     background-color: $gray-200-color;
 
-    &::before,
     &::after {
         content: '';
 
@@ -101,32 +100,32 @@
         background-size: 100% 100%;
         background-image: url(../img/bg/line.svg);
     }
+}
 
-    &::after {
-        z-index: 1;
+.range__slider-active {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
 
-        background-color: #8a86c5;
-        background-image: linear-gradient(90deg, #d7b3f4, #8a86c5);
+    background-color: #8a86c5;
+    background-image: linear-gradient(90deg, #d7b3f4, #8a86c5);
 
-        transform-origin: 0 0;
-        transform: scaleX(0);
-        transition: transform 250ms;
-    }
-
-    .range__input:focus ~ & {
+    .range__input:focus ~ .range__slider & {
         outline: 2px solid rgba($primary-color, .3);
     }
-    .range__input:nth-of-type(1):checked ~ &::after {
-        transform: scaleX(.25);
+    .range__input:nth-of-type(1):checked ~ .range__slider & {
+        width: 25%;
     }
-    .range__input:nth-of-type(2):checked ~ &::after {
-        transform: scaleX(.5);
+    .range__input:nth-of-type(2):checked ~ .range__slider & {
+        width: 50%;
     }
-    .range__input:nth-of-type(3):checked ~ &::after {
-        transform: scaleX(.75);
+    .range__input:nth-of-type(3):checked ~ .range__slider & {
+        width: 75%;
     }
-    .range__input:nth-of-type(4):checked ~ &::after {
-        transform: scaleX(1);
+    .range__input:nth-of-type(4):checked ~ .range__slider & {
+        width: 100%;
     }
 }
 
@@ -135,7 +134,7 @@
     top: 100%;
     z-index: 5;
 
-    display: none;
+    display: block;
     width: 25px;
     height: 25px;
     margin-top: 8px;
@@ -146,27 +145,24 @@
     border-radius: 50% 3px 50% 50%;
 
     transform: rotate(-45deg);
-    transition: background-color 250ms, border-color 250ms, transform 250ms;
+    transition: background-color 250ms, border-color 250ms;
 
     &:hover {
         background-color: $secondary-color;
         border-color: $primary-color;
     }
 
-    @include breakpoint(medium) {
-        display: block;
-        .range__input:nth-of-type(1):checked ~ .range__slider & {
-            transform: translateX(192px) rotate(-45deg);
-        }
-        .range__input:nth-of-type(2):checked ~ .range__slider & {
-            transform: translateX(384px) rotate(-45deg);
-        }
-        .range__input:nth-of-type(3):checked ~ .range__slider & {
-            transform: translateX(576px) rotate(-45deg);
-        }
-        .range__input:nth-of-type(4):checked ~ .range__slider & {
-            transform: translateX(768px) rotate(-45deg);
-        }
+    .range__input:nth-of-type(1):checked ~ .range__slider & {
+        left: 25%;
+    }
+    .range__input:nth-of-type(2):checked ~ .range__slider & {
+        left: 50%;
+    }
+    .range__input:nth-of-type(3):checked ~ .range__slider & {
+        left: 75%;
+    }
+    .range__input:nth-of-type(4):checked ~ .range__slider & {
+        left: 100%;
     }
 }
 
