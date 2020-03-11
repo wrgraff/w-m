@@ -5,6 +5,7 @@
 
 .range__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     margin: 0;
     padding: 0;
@@ -14,45 +15,52 @@
 
 .range__item {
     position: relative;
-    flex-basis: 25%;
+
+    flex-basis: 100%;
 
     font-size: 13px;
     line-height: 19px;
 
     transition: color 250ms;
 
-    &:last-child {
-        text-align: right;
-    }
-
-    &::before,
-    &::after {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: 4;
-
-        width: 1px;
-        height: 25px;
-        
-        border-left: 1px dotted $gray-200-color;
-    }
-    &::after {
-        content: '';
-    }
-
-    &:first-child::before {
-        content: '';
-        right: auto;
-        left: 0;
-    }
-
     &:hover {
         color: $primary-color;
+    }
+
+    @include breakpoint(medium) {
+        flex-basis: 25%;
+
+        &:last-child {
+            text-align: right;
+        }
+        &::before,
+        &::after {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 4;
+    
+            width: 1px;
+            height: 25px;
+            
+            border-left: 1px dotted $gray-200-color;
+        }
+        &::after {
+            content: '';
+        }
+    
+        &:first-child::before {
+            content: '';
+            right: auto;
+            left: 0;
+        }
     }
 }
 
 .range__label {
+    position: relative;
+    z-index: 4;
+
     display: block;
     padding: 0 10px 30px 0;
 
