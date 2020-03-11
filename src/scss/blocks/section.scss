@@ -1,0 +1,48 @@
+.section {
+    padding-top: 66px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+}
+
+.section_personal {
+    background-image: url(../img/ico/icon-info.svg);
+}
+.section_experience {
+    background-image: url(../img/ico/icon-experience.svg);
+}
+.section_js {
+    background-image: url(../img/ico/icon-js.svg);
+}
+.section_about {
+    background-image: url(../img/ico/icon-about.svg);
+}
+
+.section__heading {
+    margin: 0 0 47px;
+
+    text-align: center;
+    font-size: 30px;
+}
+
+.section__text {
+    max-width: 520px;
+    margin: 0 auto 24px;
+
+    color: $gray-900-color;
+
+    text-align: center;
+
+    .section__heading + & {
+        margin-top: -42px;
+    }
+}
+
+.section__field {
+    display: block;
+    max-width: 520px;
+    margin: 0 auto 25px;
+}
+
+.section__field_select {
+    max-width: 320px;
+}

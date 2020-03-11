@@ -1,0 +1,28 @@
+.page-main {
+    padding: 106px 40px 74px;
+
+    background-image: 
+        linear-gradient(to top, $white-color 0%, rgba(62, 63, 115, 0) 100%),
+        url(../img/bg/forest.jpg);
+    background-size: 100% 180px;
+    background-repeat: no-repeat;
+
+    text-align: center;
+}
+
+.page-main__heading {
+    margin: 0 0 50px;
+
+    text-align: center;
+    font-size: 70px;
+    line-height: 100px;
+}
+
+.page-main__section {
+    max-width: 768px;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+        margin-bottom: 75px;
+    }
+}

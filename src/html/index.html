@@ -13,31 +13,39 @@
 
 	<body>
 		<header class="page-header">
-			<nav>
-				<ul>
-					<li><a href="#personal">Личная информация</a></li>
-					<li><a href="#experience">Опыт</a></li>
-					<li><a href="#js">JavaScript</a></li>
-					<li><a href="#about">О себе</a></li>
+			<nav class="page-header__nav">
+				<ul class="page-header__menu menu">
+					<li class="menu__item">
+                        <a href="#personal" class="menu__link">Личная информация</a>
+                    </li>
+					<li class="menu__item">
+                        <a href="#experience" class="menu__link">Опыт</a>
+                    </li>
+					<li class="menu__item">
+                        <a href="#js" class="menu__link">JavaScript</a>
+                    </li>
+					<li class="menu__item">
+                        <a href="#about" class="menu__link">О себе</a>
+                    </li>
 				</ul>
 			</nav>
 		</header>
 
 		<main class="page-main">
-			<h1>Анкета</h1>
+			<h1 class="page-main__heading">Анкета</h1>
 
 			<form action="#" method="post">
-				<section id="personal">
-					<h2>Личная информация</h2>
+				<section class="page-main__section section section_personal" id="personal">
+					<h2 class="section__heading">Личная информация</h2>
 
-					<label>
-						<span>ФИО</span>
-						<input type="text" name="name">
+					<label class="section__field field">
+						<span class="field__label">ФИО</span>
+						<input class="field__input" type="text" name="name">
 					</label>
 
-					<label>
-						<span>Год рождения</span>
-						<select>
+					<label class="section__field section__field_select select">
+						<span class="select__label">Год рождения</span>
+						<select class="select__input">
 							<option value="2005">2005</option>
 							<option value="2004">2004</option>
 							<option value="2003">2003</option>
@@ -46,121 +54,126 @@
 						</select>
 					</label>
 
-					<label>
-						<span>Место проживания</span>
-						<input type="text" name="place">
+					<label class="section__field field">
+						<span class="field__label">Место проживания</span>
+						<input class="field__input" type="text" name="place">
 					</label>
 
-					<label>
-						<span>Skype</span>
-						<input type="text" name="skype">
+					<label class="section__field field">
+						<span class="field__label">Skype</span>
+						<input class="field__input" type="text" name="skype">
 					</label>
 
-					<label>
-						<span>E-mail</span>
-						<input type="email" name="email">
+					<label class="section__field field">
+						<span class="field__label">E-mail</span>
+						<input class="field__input" type="email" name="email">
 					</label>
 				</section>
 
-				<section id="experience">
-					<h2>Расскажите о своем опыте</h2>
+				<section class="page-main__section section section_experience" id="experience">
+					<h2 class="section__heading">Расскажите о своем опыте</h2>
 
-					<ul>
-						<li>
-							<label>
-								<input type="checkbox" name="experience-methodology">
-								<span>БЭМ/OOCSS</span>
+					<ul class="checkboxes">
+						<li class="checkboxes__item">
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox" name="experience-methodology">
+								<span class="checkbox__text">БЭМ/OOCSS</span>
 							</label>
 						</li>
-						<li>
-							<label>
-								<input type="checkbox" name="experience-preprocessor">
-								<span>Stylus/LESS/SASS</span>
+						<li class="checkboxes__item">
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox" name="experience-preprocessor">
+								<span class="checkbox__text">Stylus/LESS/SASS</span>
 							</label>
 						</li>
-						<li>
-							<label>
-								<input type="checkbox" name="experience-svg">
-								<span>Работаю с SVG</span>
+						<li class="checkboxes__item">
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox" name="experience-svg">
+								<span class="checkbox__text">Работаю с SVG</span>
 							</label>
 						</li>
-						<li>
-							<label>
-								<input type="checkbox" name="experience-semantic">
-								<span>Верстаю семантично</span>
+						<li class="checkboxes__item">
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox" name="experience-semantic">
+								<span class="checkbox__text">Верстаю семантично</span>
 							</label>
 						</li>
-						<li>
-							<label>
-								<input type="checkbox" name="experience-es">
-								<span>ES2015/ES2016</span>
+						<li class="checkboxes__item">
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox" name="experience-es">
+								<span class="checkbox__text">ES2015/ES2016</span>
 							</label>
 						</li>
-						<li>
-							<label>
-								<input type="checkbox" name="experience-builder">
-								<span>Gulp/GRUNT</span>
+						<li class="checkboxes__item">
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox" name="experience-builder">
+								<span class="checkbox__text">Gulp/GRUNT</span>
 							</label>
 						</li>
-						<li>
-							<label>
-								<input type="checkbox" name="experience-webpack">
-								<span>Webpack</span>
+						<li class="checkboxes__item">
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox" name="experience-webpack">
+								<span class="checkbox__text">Webpack</span>
 							</label>
 						</li>
-						<li>
-							<label>
-								<input type="checkbox" name="experience-jquery">
-								<span>jQuery</span>
+						<li class="checkboxes__item">
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox" name="experience-jquery">
+								<span class="checkbox__text">jQuery</span>
 							</label>
 						</li>
-						<li>
-							<label>
-								<input type="checkbox" name="experience-git">
-								<span>Ипользую Git</span>
+						<li class="checkboxes__item">
+							<label class="checkbox">
+								<input class="checkbox__input" type="checkbox" name="experience-git">
+								<span class="checkbox__text">Ипользую Git</span>
 							</label>
 						</li>
 					</ul>
 				</section>
 
-				<section id="js">
-					<h2>Уровень владения JavaScript</h2>
+				<section class="page-main__section section section_js" id="js">
+					<h2 class="section__heading">Уровень владения JavaScript</h2>
 
-					<ul>
-						<li>
-							<label>
-								<input type="radio" name="js" value="1 level">
-							</label>
-						</li>
-						<li>
-							<label>
-								<input type="radio" name="js" value="2 level">
-							</label>
-						</li>
-						<li>
-							<label>
-								<input type="radio" name="js" value="3 level">
-							</label>
-						</li>
-						<li>
-							<label>
-								<input type="radio" name="js" value="4 level">
-							</label>
-						</li>
-					</ul>
+                    <div class="range">
+                        <ul class="range__list">
+                            <li class="range__item">
+                                <label class="range__label" for="js-level-1">Не владею</label>
+                            </li>
+                            <li class="range__item">
+                                <label class="range__label" for="js-level-2">Использую готовые<br>решения</label>
+                            </li>
+                            <li class="range__item">
+                                <label class="range__label" for="js-level-3">Использую готовые решения и умею и переделывать</label>
+                            </li>
+                            <li class="range__item">
+                                <label class="range__label" for="js-level-4">Пишу сложный JS с нуля</label>
+                            </li>
+                        </ul>
+
+                        <input class="range__input" type="radio" name="js" id="js-level-1" value="1 level">
+                        <input class="range__input" type="radio" name="js" id="js-level-2" value="2 level">
+                        <input class="range__input" type="radio" name="js" id="js-level-3" value="3 level">
+                        <input class="range__input" type="radio" name="js" id="js-level-4" value="4 level">
+
+                        <div class="range__slider">
+                            <button type="button" class="range__button range__button_hided">
+                                <span class="visually-hidden">Ручка изменения уровня</span>
+                            </button>
+                        </div>
+                    </div>
 				</section>
 
-				<section id="about">
-					<h2>Расскажите о себе</h2>
-					<p>Напишите несколько предложений, чем привлекла наша вакансия и&nbsp;что вы&nbsp;ожидаете от&nbsp;работы у&nbsp;нас.</p>
+				<section class="page-main__section section section_about" id="about">
+					<h2 class="section__heading">Расскажите о себе</h2>
+					<p class="section__text">Напишите несколько предложений, чем привлекла наша вакансия и&nbsp;что вы&nbsp;ожидаете от&nbsp;работы у&nbsp;нас.</p>
 
-					<label>
-						<span>Напишите чем привлекла вакансия и что ожидаете от работы</span>
-						<textarea name="about" rows="10" placeholder="Понравилась тем, что..."></textarea>
+					<label class="section__field textarea">
+						<span class="visually-hidden">Напишите чем привлекла вакансия и что ожидаете от работы</span>
+						<textarea class="textarea__input" name="about" rows="6" placeholder="Понравилась тем, что..."></textarea>
 					</label>
 				</section>
 
-				<button type="submit">Готово</button>
+				<button type="submit" class="button">Готово</button>
 			</form>
 		</main>
 

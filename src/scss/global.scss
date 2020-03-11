@@ -1,13 +1,22 @@
 html, body {
     font-family: $font-family, 'Helvetica', 'Segoe UI', sans-serif;
     min-width: 320px;
+    background-color: $white-color;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 500;
+h1 {
+    font-weight: 100;
+}
+h2, h3, h4, h5, h6 {
+    font-weight: 300;
 }
 
 a {
-    color: color(primary);
+    color: $primary-color;
     text-decoration: none;
+    transition: color 250ms;
+
+    &:hover {
+        color: $gray-900-color;
+    }
 }

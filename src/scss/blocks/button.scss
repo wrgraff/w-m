@@ -1,0 +1,14 @@
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    padding: 13px 34px 14px;
+
+    color: $white-color;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 10px;
+    
+    font-weight: 300;
+    line-height: 24px;
+}
