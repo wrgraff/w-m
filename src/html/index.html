@@ -12,15 +12,159 @@
 	</head>
 
 	<body>
-		<div class="page-layout">
-			<header class="page-header"></header>
+		<header class="page-header">
+			<nav>
+				<ul>
+					<li><a href="#personal">Личная информация</a></li>
+					<li><a href="#experience">Опыт</a></li>
+					<li><a href="#js">JavaScript</a></li>
+					<li><a href="#about">О себе</a></li>
+				</ul>
+			</nav>
+		</header>
 
-			<main class="page-main">
-				<p>Content</p>
-			</main>
+		<main class="page-main">
+			<h1>Анкета</h1>
 
-			<footer class="page-footer"></footer>
-		</div>
+			<form action="#" method="post">
+				<section id="personal">
+					<h2>Личная информация</h2>
+
+					<label>
+						<span>ФИО</span>
+						<input type="text" name="name">
+					</label>
+
+					<label>
+						<span>Год рождения</span>
+						<select>
+							<option value="2005">2005</option>
+							<option value="2004">2004</option>
+							<option value="2003">2003</option>
+							<option value="2002">2002</option>
+							<option value="2001">2001</option>
+						</select>
+					</label>
+
+					<label>
+						<span>Место проживания</span>
+						<input type="text" name="place">
+					</label>
+
+					<label>
+						<span>Skype</span>
+						<input type="text" name="skype">
+					</label>
+
+					<label>
+						<span>E-mail</span>
+						<input type="email" name="email">
+					</label>
+				</section>
+
+				<section id="experience">
+					<h2>Расскажите о своем опыте</h2>
+
+					<ul>
+						<li>
+							<label>
+								<input type="checkbox" name="experience-methodology">
+								<span>БЭМ/OOCSS</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="experience-preprocessor">
+								<span>Stylus/LESS/SASS</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="experience-svg">
+								<span>Работаю с SVG</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="experience-semantic">
+								<span>Верстаю семантично</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="experience-es">
+								<span>ES2015/ES2016</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="experience-builder">
+								<span>Gulp/GRUNT</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="experience-webpack">
+								<span>Webpack</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="experience-jquery">
+								<span>jQuery</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="experience-git">
+								<span>Ипользую Git</span>
+							</label>
+						</li>
+					</ul>
+				</section>
+
+				<section id="js">
+					<h2>Уровень владения JavaScript</h2>
+
+					<ul>
+						<li>
+							<label>
+								<input type="radio" name="js" value="1 level">
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" name="js" value="2 level">
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" name="js" value="3 level">
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" name="js" value="4 level">
+							</label>
+						</li>
+					</ul>
+				</section>
+
+				<section id="about">
+					<h2>Расскажите о себе</h2>
+					<p>Напишите несколько предложений, чем привлекла наша вакансия и&nbsp;что вы&nbsp;ожидаете от&nbsp;работы у&nbsp;нас.</p>
+
+					<label>
+						<span>Напишите чем привлекла вакансия и что ожидаете от работы</span>
+						<textarea name="about" rows="10" placeholder="Понравилась тем, что..."></textarea>
+					</label>
+				</section>
+
+				<button type="submit">Готово</button>
+			</form>
+		</main>
+
+		<footer class="page-footer"></footer>
 
 		<!-- Scripts -->
 	</body>
