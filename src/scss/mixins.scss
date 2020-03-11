@@ -1,0 +1,39 @@
+@mixin visually-hidden {
+    position: absolute;
+    
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+@mixin focus-outline($outset: false) {
+    outline-width: 2px;
+    outline-style: solid;
+    @if ($outset == true) {
+        outline-offset: 2px;
+    } @else {
+        outline-offset: -2px;
+    }
+    outline-color: rgba(color(primary), .5);
+}
+
+@mixin breakpoint($breakpoint-name, $destination: up) {
+    $breakpoint: $breakpoint-name;
+    @if (map-get($breakpoints, $breakpoint-name)) {
+        $breakpoint: map-get($breakpoints, $breakpoint-name);
+    }
+    @if ($destination == down) {
+        @media screen and (max-width: $breakpoint) {
+            @content;
+        }
+    } @else {
+        @media screen and (min-width: $breakpoint) {
+            @content;
+        }
+    }
+}

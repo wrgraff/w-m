@@ -1,0 +1,13 @@
+html, body {
+    font-family: $font-family, 'Helvetica', 'Segoe UI', sans-serif;
+    min-width: 320px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+a {
+    color: color(primary);
+    text-decoration: none;
+}
