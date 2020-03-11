@@ -1,3 +1,85 @@
-.page-header {
-    
+.page-header__toggler {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 5px 25px 5px 65px;
+
+    color: $primary-color;
+    background-color: transparent;
+    border: none;
+
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: background-color 250ms, color 250ms;
+
+    &::before,
+    &::after {
+        content: '';
+
+        position: absolute;
+        left: 25px;
+        top: 50%;
+
+        width: 28px;
+        height: 2px;
+
+        background-color: $primary-color;
+
+        transition: background-color 250ms, transform 250ms;
+    }
+    &::before {
+        transform: translateY(-3px);
+    }
+    &::after {
+        transform: translateY(3px);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $secondary-color;
+
+        &::before {
+            transform: translateY(-5px);
+        }
+        &::after {
+            transform: translateY(5px);
+        }
+    }
+    &:focus {
+        background-color: transparent;
+        outline-width: 2px;
+        outline-style: solid;
+        outline-offset: -2px;
+        outline-color: rgba($secondary-color, .3);
+    }
+
+    @include breakpoint(medium) {
+        display: none;
+    }
+}
+
+.page-header__toggler_hided {
+    display: none;
+}
+
+.page-header__menu_absolute {
+    @include breakpoint(medium, down) {
+        position: absolute;
+        right: 0;
+        left: 0;
+
+        display: none;
+
+        background-color: $white-color;
+        box-shadow: 0 8px 16px rgba($primary-color, .4);
+    }
+}
+
+.page-header__menu_opened {
+    @include breakpoint(medium, down) {
+        display: block;
+    }
 }
