@@ -1,12 +1,12 @@
 .field {
     position: relative;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .field__label {
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-
+    order: -1;
     display: block;
     padding: 8px;
 
@@ -15,9 +15,24 @@
     font-size: 24px;
     line-height: 24px;
     text-align: center;
+    white-space: nowrap;
 
-    // transform: translate(-50%, -50%);
-    // cursor: text;
+    .field_floating & {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: transform 250ms;
+
+        background-color: $white-color;
+
+        transform: translate(-50%, -50%);
+        cursor: text;
+    }
+
+    .field__input:focus + &,
+    .field__input_filled + & {
+        transform: translate(-50%, -50px) scale(.7);
+    }
 }
 
 .field__input {
@@ -25,7 +40,6 @@
     height: 60px;
     padding: 18px 16px 16px;
 
-    color: $gray-400-color;
     border: 1px solid $gray-200-color;
     border-radius: 4px;
 

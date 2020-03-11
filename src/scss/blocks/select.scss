@@ -7,10 +7,6 @@
 }
 
 .select__label {
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-
     display: block;
     padding: 8px;
 
@@ -19,9 +15,23 @@
     font-size: 24px;
     line-height: 24px;
     text-align: center;
+    white-space: nowrap;
 
-    // transform: translate(-50%, -50%);
-    // cursor: text;
+    .select_floating & {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: transform 250ms;
+
+        background-color: $white-color;
+
+        transform: translate(-50%, -50%);
+    }
+
+    .select__input:focus + &,
+    .select__input_filled + & {
+        transform: translate(-50%, -50px) scale(.7);
+    }
 }
 
 .select__input {
